@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Achat et vente en ligne parmi des millions de produits en stock. Livraison gratuite à partir de 25€. Vos articles à petits prix : culture, high-tech, mode, jouets, sport, maison et bien plus !">
+    <meta name="keywords" content="Amazon, amazon.fr, livres, achats en ligne, librairie, magazine, abonnement, musique, Cds, DVD, vidéo, électronique, jeux vidéo, ordinateurs, téléphones portables, jouets, jeux, vêtements, accessoires, chaussures, bijoux, montres, produits de bureau, sports en plein air, articles de sport, produits pour bébés, santé, soins personnels, maison, jardin, lit et de bain, meubles, outils, matériel, aspirateurs, vie en plein air, pièces pour véhicules automobiles, fournitures pour animaux de compagnie, à large bande, dsl">
+    <link rel="icon" href="/favicon.ico">
+
+   <title>Amazon.fr : livres, DVD, jeux vidéo, musique, high-tech, informatique, jouets, vêtements, chaussures, sport, bricolage, maison, beauté, puériculture, épicerie et plus encore !</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #131921;
+            padding: 0.5em;
+        }
+           button {
+            color: white;
+            background-color: #131921;
+            border: 2px solid transparent;
+            padding: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #131921;
+            border-color: white;
+        /* Conteneur principal */
+        .carousel {
+            width: 1500px;
+            height: 50px; /* Ajustez selon vos images */
+            overflow: hidden;
+            margin:  auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+        }
+
+
+        /* Images dans le carrousel */
+        .carousel-images {
+            display: flex;
+            animation-duration: 5s;
+            animation-name: img;   
+            animation-iteration-count: infinite;
+        }
+        @keyframes img {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-1000px);
+            }
+            50% {
+                transform: translateX(-2000px);
+            }
+            75% {
+                transform: translateX(-500px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Chaque image prend 100% de la taille du conteneur */
+        .carousel-images img {
+            width: 1500px;
+            height: 50px;
+            flex-shrink: 0;
+            object-fit: cover; /* Pour adapter les images */
+        }  
+        .categorie {
+            background: #fff;
+            height: 100%;
+            position: relative;
+            margin-bottom: 0;
+            margin-top: 0;
+            overflow: hidden;
+            padding-top: 20px;
+
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+     <header>  
+      <nav>
+
+           <a href="index.html"><button>Amazon.fr</button></a>
+        <a href="competences.html"><button>Votre adresse de livraison: Cameroun</button></a>
+         <div class="input-box">
+                <form>
+        <select id="choix" style="display: block; top: 2.5px;" title="Rechercher dans Amazon" name="choix">
+            <option selected="selected" value="option1">Toutes nos catégories</option>
+            <option selected="selected" value="option2">Alexia skills</option>
+            <option selected="selected"  value="option3">Amazon seconde main</option>
+        </select>
+    </div>
+        <div>  
+            <div> 
+          <input type="text" placeholder="Recherce Amazon" required/>
+           </div>
+       </div> 
+                
+          </form>   
+
+
+        <a href="projets.html"><button>loupe</button></a>
+        <a href="formation.html"><button>  
+          <form>
+            
+         <label>
+
+            <input type="checkbox" name="Français FR" value="Français FR">
+            Français FR
+            </label><br>
+        <label>
+            <input type="checkbox" name="Anglais EN" value="Anglais EN">
+            Anglais EN
+        </label><br>
+        
+          </form></button></a>
+        <a href="contact.html"><button>Bonjour identifiez vous</button></a>
+        <a href="competences.html"><button>Retour commandes</button></a>
+        <a href="projets.html"><button>Panier</button></a>
+        
+   </nav>
+    </header>
+
+        <div class="carousel">
+        <div class="carousel-images" id="carouselImages">
+          <button class="prev" onclick="prevSlide()">&#10094;</button>  
+          <img src="img11.jpg" alt="Photo 1">
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <img src="img22.jpg" alt="Photo 2">
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <img src="img33.jpg" alt="Photo 3">
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <img src="img44.jpg" alt="Photo 4">
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+             </div>
+             
+            </div>
+            <div class="bande" >
+    
+        <div class="categorie">
+            <div>
+        <h2> Aménagez votre maison </h2>
+        </div>
+    </div>
+
+        <div class="categorie">
+            <div>
+        <h2>High Tech</h2>
+        </div>
+        </div>
+
+            <div class="categorie">
+            <div>
+        <h2>Entretenez votre maison</h2>
+        </div>
+        </div>
+                <div class="categorie">
+            <div>
+        <h2>Cuisine et maison</h2>
+        </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+   
+
+</body>
+</html>
